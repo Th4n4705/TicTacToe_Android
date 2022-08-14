@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yellow Player"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/Red"
+        android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Red Player"
+       android:textSize="20dp"
+      android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true"
+        android:textColor="#000000"
+    />
+    <TextView
+        android:id="@+id/RedScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Red"
+        android:layout_alignParentLeft="true"
+        android:textSize="50dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/againButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/myGridView"
+        android:onClick="again"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:text="AGAIN"/>
+
+    <TextView
+        android:id="@+id/YellowScore"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/Yellow"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:layout_marginRight="40dp"
+        android:textColor="#000000"
+        android:textSize="50dp"
+       android:text="0"/>
+
+    <GridLayout
+        android:id="@+id/myGridView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="@drawable/board"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_above="@id/textView47">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:onClick="click"
+            android:tag="0"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:onClick="click"
+            android:tag="1"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:onClick="click"
+            android:tag="2"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click"
+            android:tag="3"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click"
+            android:tag="4"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click"
+            android:tag="5"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click"
+            android:tag="6"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click"
+            android:tag="7"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click"
+            android:tag="8"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:text="You  Win!"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
